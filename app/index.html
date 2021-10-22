@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MicroService Compositor</title>
+
+  <link rel="stylesheet" href="vendor/bpmn-js/assets/diagram-js.css" />
+  <link rel="stylesheet" href="vendor/bpmn-js/assets/bpmn-font/css/bpmn-embedded.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+    body, html {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: sans-serif;
+    }
+    .modeler-parent {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    #modeler-container {
+      flex: 1;
+    }
+    #bottom-area{
+      border-top: solid 2px black;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <div class="modeler-parent">
+    <div id="modeler-container"></div>
+     <div class="loader_container" id="sending-loader">
+          <div class="lds-hourglass"></div>
+      </div>
+    <div class="row" style="margin:0px" id="bottom-area"> 
+      <div id="properties-container" class="col-md-11"></div>
+      <div id="send-button-container" class="col-md-1"></div>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" id="menu-container"></nav>
+  
+  <div id="fragment-dialog-container"></div>
+  <div id="operation-dialog-container"></div>
+  <div id="message-dialog-container"></div>
+
+  <script>
+    function showMessage(title,text){
+        $("#messageDialog .title").text(title);
+        $("#messageDialog .content").html(text);
+        $("#messageDialog").modal();
+    }
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+
+  <script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+.element-properties label {
+  font-weight: bold;
+}
+
+.element-properties label:after {
+  content: ': ';
+}
+
+.element-properties button + button {
+  margin-left: 10px;
+}
+
+#properties-container {
+  overflow-y: auto;
+  background: #FAFAFA;
+  padding: 5px;
+  height: 100px;
+  padding-top: 20px;
+}
+
+ #properties-container fieldset{
+  margin-bottom: 10px;
+  border: solid 1px black;
+}
+
+.titulo{
+  width:100%;
+  text-align:center;
+  font-size: 24px;
+}
+
+#send-button-container{
+  padding-top: 2%;
+}
+
+#send-button{
+  border-top:solid 2px black;
+  border-left:solid 1px black;
+  text-align:center;
+}
+
+#send-button button{
+  height:50px;
+  margin-top: 25px;
+}
+
+.djs-palette{
+  top:80px !important;
+}
